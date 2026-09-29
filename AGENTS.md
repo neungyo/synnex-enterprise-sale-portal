@@ -1,9 +1,9 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# Repository guidance
 
-# This is NOT the Next.js you know
-
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
-
-<!-- END:nextjs-agent-rules -->
+- Use Next.js App Router, TypeScript and Tailwind utilities. Keep server components as the default.
+- Never expose a Supabase service-role key to the browser. Public browser keys belong in `.env.local` only.
+- Treat all seed and UI values as demonstration data; do not introduce customer, partner, or revenue data without an approved source.
+- Preserve the design system: navy `#082747` navigation, pale-blue page ground, white rounded cards, calm executive hierarchy.
+- Key Partners means dealer, reseller, and system integrator; it must not be renamed to vendors.
+- Every data mutation must enforce role permissions in RLS and/or a server action.
+- Before a handoff run `npm run lint` and `npm run build`.

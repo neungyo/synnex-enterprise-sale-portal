@@ -1,36 +1,19 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SYNNEX Enterprise Sales Portal
 
-## Getting Started
+Executive-focused sales operations workspace built with Next.js, TypeScript and Tailwind CSS. All visible records and financial values are sample data only.
 
-First, run the development server:
+## Run locally
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1. Copy `.env.example` to `.env.local` and add your Supabase public URL and anonymous key.
+2. Run `npm install`, then `npm run dev`.
+3. Open `http://localhost:3000`.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Supabase setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a Supabase project, then apply `supabase/migrations/202609290001_initial_schema.sql` in its SQL editor or with the Supabase CLI. Apply `supabase/seed.sql` only to a non-production database. Create a private `documents` Storage bucket before enabling document uploads.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Quality checks
 
-## Learn More
+Run `npm run lint` and `npm run build`. The starter is deliberately data-provider agnostic at the UI boundary; wire server-side queries and mutations after adding Supabase credentials.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See [PROJECT_SPEC.md](PROJECT_SPEC.md) for requirements and [AGENTS.md](AGENTS.md) for contribution guidance.

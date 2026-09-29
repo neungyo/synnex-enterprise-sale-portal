@@ -1,0 +1,7 @@
+import { PortalShell } from "@/components/portal-shell";
+import { SectionPage } from "@/components/section-page";
+import { notFound } from "next/navigation";
+const sections = ["customers", "opportunities", "activities", "reports", "products", "partners", "team", "documents", "approvals", "settings"] as const;
+type Section = (typeof sections)[number];
+export function generateStaticParams() { return sections.map((section) => ({ section })); }
+export default async function Page({ params }: { params: Promise<{ section: string }> }) { const { section } = await params; if (!sections.includes(section as Section)) notFound(); return <PortalShell active={section}><SectionPage section={section as Section} /></PortalShell>; }
