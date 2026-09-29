@@ -2,7 +2,7 @@
 
 ## Purpose
 
-SYNNEX Enterprise Sales Portal is an authenticated internal workspace for executive sales oversight and daily sales execution. The executive profile name in the approved experience is **คุณคะเนตรนัส**. All other people and business values in the starter are fictional sample data.
+SYNNEX Enterprise Sales Portal is an authenticated internal workspace for executive sales oversight and daily sales execution. The executive profile name in the approved experience is **kanednat**. All other people and business values in the starter are fictional sample data.
 
 ## Information architecture
 
