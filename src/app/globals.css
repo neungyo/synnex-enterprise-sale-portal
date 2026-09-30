@@ -3,27 +3,3 @@
 body { margin: 0; background: #f4f8fc; color: #112a46; font-family: Arial, Helvetica, sans-serif; }
 button { cursor: pointer; }
 
-/* Compact, image-led portal navigation based on the approved sidebar reference. */
-aside.fixed {
-  width: 14rem !important;
-  background:
-    radial-gradient(ellipse 120% 34% at 55% 102%, rgba(145, 196, 232, .38), transparent 68%),
-    linear-gradient(180deg, #101e3a 0%, #0b294f 56%, #0e315a 100%) !important;
-}
-aside.fixed::after {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  inset: auto -20% 0;
-  height: 38%;
-  opacity: .72;
-  background:
-    linear-gradient(152deg, transparent 0 35%, rgba(141, 178, 207, .74) 35.4% 36%, transparent 36.4% 100%),
-    linear-gradient(28deg, transparent 0 43%, rgba(105, 150, 186, .8) 43.4% 44%, transparent 44.4% 100%),
-    linear-gradient(180deg, transparent 0 45%, rgba(3, 20, 42, .45) 100%);
-  clip-path: polygon(0 50%, 12% 37%, 25% 49%, 46% 8%, 59% 38%, 78% 17%, 100% 53%, 100% 100%, 0 100%);
-}
-aside.fixed > :not(.absolute) { z-index: 1; }
-aside.fixed nav a { min-height: 2.55rem; padding: .55rem .8rem !important; border-radius: .55rem !important; gap: .75rem !important; font-size: .8rem !important; }
-aside.fixed nav svg { width: 1rem; height: 1rem; }
-@media (min-width: 1024px) { main.lg\:ml-60 { margin-left: 14rem !important; } }
