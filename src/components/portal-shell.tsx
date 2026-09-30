@@ -35,16 +35,6 @@ function NavIcon({ name }: { name: string }) {
   return <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-[18px] w-[18px] shrink-0">{paths[name]}</svg>;
 }
 
-function BrandMark() {
-  return <span className="relative h-7 w-9 shrink-0 overflow-hidden">
-    <i className="absolute left-0 top-0 h-3 w-9 bg-[#aaaeb4] [clip-path:polygon(0_100%,16%_0,35%_100%,52%_0,72%_100%,100%_0,84%_100%)]" />
-    <i className="absolute left-0 top-[12px] h-[3px] w-9 bg-[#ed263a]" />
-    <i className="absolute left-0 top-[15px] h-[3px] w-9 bg-white" />
-    <i className="absolute left-0 top-[18px] h-[3px] w-9 bg-[#00a35a]" />
-    <i className="absolute left-0 top-[21px] h-[4px] w-9 bg-[#1681c8]" />
-  </span>;
-}
-
 function NavLinks({ items, active, thai }: { items: typeof primary | typeof management; active: string; thai: boolean }) {
   return <>{items.map(([key, th, en, href, icon]) => <Link key={key} href={href} className={`flex h-11 items-center gap-3 rounded-[10px] px-4 text-[13px] transition ${active === key ? "bg-[#277cf4] font-semibold text-white shadow-[0_6px_18px_rgba(15,104,240,.38)]" : "text-slate-200 hover:bg-white/10 hover:text-white"}`}><NavIcon name={icon}/><span>{thai ? th : en}</span></Link>)}</>;
 }
@@ -54,14 +44,12 @@ export function PortalShell({ active, children }: { active: string; children: Re
   const thai = language === "th";
   return <div className="min-h-screen bg-[#f4f8fc] text-[#112a46]">
     <aside className="fixed inset-y-0 z-20 hidden w-[226px] flex-col overflow-hidden bg-[#102342] px-3 py-5 text-white lg:flex">
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[47%] bg-[url('/sidebar-mountain.png')] bg-cover bg-center opacity-70" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#102342] via-[#102c50]/95 to-[#06182e]/25" />
-      <div className="relative mb-6 flex items-center gap-3 px-2">
-        <BrandMark/><div><p className="text-[20px] font-black italic tracking-tight">SYNNEX</p><p className="-mt-1 text-[11px] text-slate-200">Sales Portal</p></div>
-      </div>
+      <div className="pointer-events-none absolute inset-0 bg-[url('/sidebar-mountain.png')] bg-cover bg-center opacity-45" />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#102342]/100 via-[#102b4d]/90 to-[#06182e]/45" />
+      <div className="relative h-3" />
       <nav className="relative space-y-1"><NavLinks items={primary} active={active} thai={thai}/></nav>
       <div className="relative mt-5"><p className="mb-2 px-4 text-[10px] font-semibold tracking-wide text-slate-400">MANAGEMENT</p><nav className="space-y-1"><NavLinks items={management} active={active} thai={thai}/></nav></div>
-      <div className="relative mt-auto flex items-center gap-2 px-3 pb-1 text-[10px] font-bold text-white"><BrandMark/><span>SYNNEX<br/><small className="font-normal">TRUSTED TECHNOLOGY PARTNER</small></span></div>
+      <div className="relative mt-auto h-6" />
     </aside>
     <main className="lg:ml-[226px]">
       <header className="flex h-[70px] items-center gap-4 border-b border-[#d9e8f4] bg-gradient-to-r from-[#edf7ff] to-[#d8ecfb] px-5 lg:px-7">
