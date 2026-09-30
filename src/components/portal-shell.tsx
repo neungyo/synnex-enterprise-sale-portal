@@ -11,7 +11,7 @@ const primary = [
   ["activities", "กิจกรรม", "Activities", "/activities", "calendar"],
   ["reports", "รายงาน", "Reports", "/reports", "chart"],
   ["products", "สินค้า", "Products", "/products", "cube"],
-  ["partners", "งาน", "Tasks", "/partners", "check"],
+  ["partners", "คู่ค้าหลัก", "Key Partners", "/partners", "check"],
   ["team", "ทีมงาน", "Team", "/team", "users"],
 ] as const;
 const management = [
