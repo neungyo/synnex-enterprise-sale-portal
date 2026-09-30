@@ -20,7 +20,7 @@ Customer and Partner are related to Opportunity. An Opportunity owns Activities,
 
 ## Delivery roadmap
 
-1. Add Supabase SSR client and login/session middleware.
+1. Add a server-side Neon database client and login/session middleware.
 2. Replace sample UI arrays with typed repository queries.
 3. Add RLS policies that scope writes and reads by role/ownership.
 4. Implement opportunity-product linking, document upload/signed download, approvals workflow, audit log, reports, tests and deployment.
