@@ -6,7 +6,7 @@ export const metadata: Metadata = { title: "SYNNEX Enterprise Sales Portal", des
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="th" className="h-full antialiased">
+    <html lang="en" className="h-full antialiased">
       <body className="min-h-full flex flex-col"><LanguageProvider>{children}</LanguageProvider></body>
     </html>
   );

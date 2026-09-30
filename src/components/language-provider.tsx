@@ -3,10 +3,10 @@
 import { createContext, useContext, useState } from "react";
 
 export type Language = "th" | "en";
-const LanguageContext = createContext<{ language: Language; setLanguage: (language: Language) => void }>({ language: "th", setLanguage: () => undefined });
+const LanguageContext = createContext<{ language: Language; setLanguage: (language: Language) => void }>({ language: "en", setLanguage: () => undefined });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>("th");
+  const [language, setLanguage] = useState<Language>("en");
   const selectLanguage = (next: Language) => setLanguage(next);
   return <LanguageContext.Provider value={{ language, setLanguage: selectLanguage }}>{children}</LanguageContext.Provider>;
 }
