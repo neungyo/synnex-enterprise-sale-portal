@@ -13,6 +13,7 @@ const primary = [
   ["products", "สินค้า", "Products", "/products", "cube"],
   ["partners", "คู่ค้าหลัก", "Key Partners", "/partners", "check"],
   ["team", "ทีมงาน", "Team", "/team", "users"],
+  ["documents", "เอกสาร", "Documents", "/documents", "file"],
 ] as const;
 const management = [
   ["approvals", "อนุมัติ", "Approval", "/approvals", "file"],
