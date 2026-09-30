@@ -1,11 +1,11 @@
 import { betterAuth } from "better-auth";
-import { admin } from "better-auth/plugins";
+import { admin, username } from "better-auth/plugins";
 import { database } from "@/lib/database";
 
 export const auth = betterAuth({
   database,
   emailAndPassword: { enabled: true, disableSignUp: true },
-  plugins: [admin({ defaultRole: "user" })],
+  plugins: [admin({ defaultRole: "user" }), username({ immutableUsername: true })],
   databaseHooks: {
     user: {
       create: {
